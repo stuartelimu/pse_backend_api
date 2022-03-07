@@ -1,0 +1,39 @@
+### Get TODOS
+GET http://localhost:5000/api/todos
+Accept: application/json
+
+### Get TODOS
+GET http://localhost:5000/api/todos?page=2
+Accept: application/json
+
+### Add TODO errored
+POST http://localhost:5000/api/todos
+Accept: application/json
+Content-Type: application/json
+
+{
+
+}
+
+### Add TODO success
+POST http://localhost:5000/api/todos
+Accept: application/json
+Content-Type: application/json
+
+{
+    "title":"Notify Silencers" 
+}
+
+### Delete TODO success
+DELETE  http://localhost:5000/api/todos/7
+Accept: application/json
+Content-Type: application/json
+
+### Update TODO success
+PUT  http://localhost:5000/api/todos/6
+Accept: application/json
+Content-Type: application/json
+
+{
+    "completed": true
+}
