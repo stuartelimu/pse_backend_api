@@ -1,12 +1,13 @@
 const TodoItem = require("../models/todo");
 
 // database connection
-const sqlite = require("sqlite");
-const { response } = require("express");
+const sqlite = require("sqlite3");
 const dbName = process.env.NODE_ENV === "test" ? "test" : "todos";
 const db = new sqlite.Database(`data/${dbName}.db`);
 
 const todos_table = "todos";
+
+
 
 module.exports.setUp = function () {
   return new Promise((resolve, reject) => {
