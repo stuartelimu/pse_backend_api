@@ -7,6 +7,10 @@ app.use(express.json());
 const db = require("./db/db");
 db.setUp();
 
+// CORS 
+const cors = require('cors');
+app.use(cors());
+
 // todos
 const todos = require("./routes/todos");
 app.use("/api/", todos);
